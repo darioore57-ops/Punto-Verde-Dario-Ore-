@@ -1,0 +1,410 @@
+/* RESET Y CONFIGURACIÓN GENERAL CON POOPINS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* PALETA DE COLORES MODERNA Y LLAMATIVA */
+:root {
+    --primary-color: #2563eb;      /* Azul eléctrico llamativo */
+    --primary-dark: #1e40af;       /* Azul oscuro profundo */
+    --accent-color: #f97316;       /* Naranja vibrante para destacar */
+    --accent-light: #ffedd5;       
+    --bg-light: #f1f5f9;
+    --text-dark: #0f172a;
+    --text-light: #475569;
+    --white: #ffffff;
+    --shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+}
+
+/* NAVEGACIÓN SUPERIOR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ESTILOS PARA EL LOGOTIPO EN LA NAVBAR */
+.nav-logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.badge-grado {
+    background: linear-gradient(135deg, var(--accent-color), #ea580c);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* SECCIÓN HERO (INICIO) */
+.hero-section {
+    padding: 150px 20px 90px 20px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: rgba(249, 115, 22, 0.2);
+    color: var(--accent-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(249, 115, 22, 0.4);
+}
+
+.hero-quote {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.6);
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    object-fit: cover;
+    max-height: 440px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CONTENEDORES DE SECCIÓN Y TARJETAS */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+}
+
+.section-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.bg-light {
+    background-color: #f1f5f9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.2);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-container img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* SECCIÓN GALERÍA (RULETA) */
+.carousel-container {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 480px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carousel-img-clean {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botones de navegación de la ruleta */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(15, 23, 42, 0.7);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* Indicadores de puntos */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.dot.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+.footer-logo-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer p {
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* DISEÑO RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-quote {
+        font-size: 2.2rem;
+    }
+    .hero-img {
+        max-height: 300px;
+    }
+    .carousel-track {
+        height: 300px;
+    }
+}
